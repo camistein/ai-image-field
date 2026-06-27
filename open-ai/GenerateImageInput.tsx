@@ -95,8 +95,11 @@ export const AIImageInput: ComponentType<
       setAIImage(undefined);
       props.onChange(
         set({
-          ...props.value,
-          asset: { _ref: image._id, _type: "reference" },
+          _type: "image",
+          asset: {
+            _ref: image._id,
+            _type: "reference",
+          },
         }),
       );
       setOpen(false);
